@@ -33,7 +33,3 @@ function onFormSubmit(evt) {
     localStorage.removeItem(LOCAL_FORM_DATA);
     formData = {};
 };
-
-
-
-
