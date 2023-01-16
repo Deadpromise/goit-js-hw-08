@@ -6,7 +6,7 @@ const textareaRef = document.querySelector('[name="message"]');
 
 const LOCAL_FORM_DATA = "feedback-form-state";
 const savedValues = localStorage.getItem(LOCAL_FORM_DATA);
-const formData = JSON.parse(savedValues) || {};
+let formData = JSON.parse(savedValues) || {};
 
 setSavedData();
 
@@ -30,7 +30,8 @@ function onFormSubmit(evt) {
     evt.preventDefault();
     console.log(formData);
     evt.currentTarget.reset();
-    localStorage.removeItem(LOCAL_FORM_DATA);   
+    localStorage.removeItem(LOCAL_FORM_DATA);
+    formData = {};
 };
 
 
